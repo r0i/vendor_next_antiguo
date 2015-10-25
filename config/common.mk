@@ -121,6 +121,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/next/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/next/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
+#Es File Explorer
+PRODUCT_COPY_FILES += \
+    vendor/next/prebuilt/common/app/ESFE.apk:system/app/ESFE.apk
+
 # Layers Manager
 PRODUCT_COPY_FILES += \
 	vendor/next/prebuilt/common/apk/LayersManager.apk:system/priv-app/LayersManager/LayersManager.apk
