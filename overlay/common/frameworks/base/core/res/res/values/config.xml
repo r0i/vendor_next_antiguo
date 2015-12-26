@@ -42,5 +42,10 @@
         <item>.*com.antutu.benchmark.*,2</item>
     </string-array -->
 
+    <!-- Hide Project Fi app unless it is being used -->
+    <string-array name="config_disabledUntilUsedPreinstalledCarrierApps">
+        <item>com.google.android.apps.tycho</item>
+    </string-array>
+
 </resources>
 
