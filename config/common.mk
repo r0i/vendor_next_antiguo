@@ -68,7 +68,12 @@ PRODUCT_PACKAGES += \
 
 # AudioFX
 PRODUCT_PACKAGES += \
-    AudioFX
+    AudioFX \
+    Eleven
+
+# Busybox
+PRODUCT_PACKAGES += \
+    Busybox
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
