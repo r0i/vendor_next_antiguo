@@ -1,0 +1,7 @@
+#!/system/bin/sh
+#
+# Print startup info
+#
+L="log -p i -t next"
+
+$L "Welcome to Android `getprop ro.build.version.release` / Next-OS `getprop ro.next.version`";
