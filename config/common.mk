@@ -119,9 +119,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/next/overlay/common
 
-# Boot animation include
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/next/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
