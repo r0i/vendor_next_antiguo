@@ -65,11 +65,6 @@ PRODUCT_PACKAGES += \
     Basic \
     LiveWallpapersPicker
 
-# AudioFX
-PRODUCT_PACKAGES += \
-    AudioFX \
-    Eleven
-
 # Busybox
 PRODUCT_PACKAGES += \
     Busybox
