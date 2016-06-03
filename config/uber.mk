@@ -6,6 +6,9 @@ ifeq (Linux,$(UNAME))
   HOST_OS := linux
 endif
 
+# Disable jack building to fix clang errors
+export ANDROID_COMPILE_WITH_JACK := false
+
 ifeq (linux,$(HOST_OS))
 ifeq (arm,$(TARGET_ARCH))
 # ANDROIDEABI TOOLCHAIN INFO
@@ -107,7 +110,17 @@ endif
 ifeq (true,$(CLANG_O3))
   OPT5 := (clang_O3)
 endif
-GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)
+ifeq (true,$(CORTEX_TUNINGS))
+  OPT6 := (CORTEX)
+endif
+ifeq (true,$(USE_PIPE))
+  OPT7 := (pipe)
+endif
+ifeq (true,$(ENABLE_SANITIZE))
+  OPT8 := (mem-sanitize)
+endif
+
+GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)$(OPT6)$(OPT7)$(OPT8)
 ifneq (,$(GCC_OPTIMIZATION_LEVELS))
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.uber.flags=$(GCC_OPTIMIZATION_LEVELS)
