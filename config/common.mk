@@ -131,7 +131,7 @@ PRODUCT_COPY_FILES += \
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-	vendor/next/prebuilt/common/UPDATE-SuperSU.zip:system/supersu.zip \
+	vendor/next/prebuilt/common/supersu.zip:system/supersu.zip \
 	vendor/next/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Versioning System
